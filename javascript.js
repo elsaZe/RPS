@@ -1,5 +1,5 @@
 let computerSelection;
-let playerSelection = "rock"
+let playerSelection;
 
 function computerPlay() {
     let randomNumber = Math.floor(Math.random()*3);
@@ -14,27 +14,57 @@ function computerPlay() {
 }
 computerPlay()
 
+function playerPlay() {
+    let randomNumber = Math.floor(Math.random()*3);
+    if (randomNumber == 0) {
+        playerSelection = "rock";
+    } else if (randomNumber == 1) {
+        playerSelection = "paper";
+    } else if (randomNumber == 2) {
+        playerSelection = "scissors"
+    }
+    return playerSelection;
+}
+playerPlay()
+
 let result;
 
 function playRound(playerSelection, computerSelection) {
-    
+    playerSelection = playerSelection.toLowerCase();
     if (playerSelection == computerSelection) {
         result = "It's a tie!"
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
-        result = "Rock beats scissors. You Win!";
+        result = "win";
     } else if (computerSelection == "rock" && playerSelection == "scissors"){
-        result = "Rock beats scissors. Computer Wins!"
+        result = "lose"
     } else if (playerSelection == "scissors" && computerSelection == "paper"){
-        result = "Scissors beats paper. You Win!"
+        result = "win"
     } else if (playerSelection == "paper" && computerSelection == "scissors"){
-        result = "Scissors beats paper. Computer Wins!"
+        result = "lose"
     } else if (playerSelection == "paper" && computerSelection == "rock"){
-        result = "Paper beats rock. You Win!"
+        result = "win"
     } else if (playerSelection == "rock" && computerSelection == "paper"){
-        result = "Paper beats rock. Computer Wins!"
+        result = "lose"
     }
     return result
 }
 
-playRound("paper",computerSelection)
-console.log(result)
+playRound(playerPlay(),computerPlay())
+console.log("You " + result+"!")
+
+function game() {
+    let wins = 0;
+    let loses = 0;
+    for(let i = 0; i < 5; i++) {
+        playRound(playerPlay(),computerPlay())
+        if (result == "lose") {
+            loses++;
+        } else if (result == "win") {
+            wins++;
+        }
+           console.log("The score is: Wins: "+wins+" Loses: "+loses);
+        }
+
+    }
+game();
+        
