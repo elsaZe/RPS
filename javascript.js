@@ -54,13 +54,19 @@ function chooseRock() {
     if (result == "lose") {
         loses++;
         document.getElementById("result").innerHTML = "paper beats rock. You lose!";
+        document.getElementById("player").innerHTML= "You Select: \nRock";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nPaper";
         countClicks ();
     } else if (result == "win") {
         wins++;
         document.getElementById("result").innerHTML = "rock beats scissors. You win!";
+        document.getElementById("player").innerHTML= "You Select: \nRock";
+        document.getElementById("computer").innerHTML = "Computer Plays: \nScissors";
         countClicks ();
     } else if (result == "tie") {
         document.getElementById("result").innerHTML = "It's a tie! Try again.";
+        document.getElementById("player").innerHTML= "You Select: \nRock";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nRock";
     }
     document.getElementById("score").innerHTML = "The score is: "+wins+ " Wins and "+loses;
    
@@ -71,13 +77,19 @@ function choosePaper () {
     if (result == "lose") {
         loses++;
         document.getElementById("result").innerHTML = "scissor beats paper. You lose!";
+        document.getElementById("player").innerHTML= "You Select: \nPaper";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nScissors";
         countClicks ();
     } else if (result == "win") {
         wins++;
         document.getElementById("result").innerHTML ="paper beats rock. You win!";
+        document.getElementById("player").innerHTML= "You Select: \nPaper";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nRock";
         countClicks ();
     } else if (result == 'tie'){
         document.getElementById("result").innerHTML = "It's a tie. Try again.";
+        document.getElementById("player").innerHTML= "You Select: \nPaper";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nPaper";
     }
     document.getElementById("score").innerHTML = "The score is: Wins: "+wins+" Loses: "+loses;
    
@@ -88,13 +100,19 @@ function chooseScissors () {
     if (result == "lose") {
         loses++;
         document.getElementById("result").innerHTML = "rock best scissors. You lose!";
+        document.getElementById("player").innerHTML= "You Select: \nScissors";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nRock";
         countClicks ();
     } else if (result == "win") {
         wins++;
         document.getElementById("result").innerHTML = "scissors beats paper. You win!";
+        document.getElementById("player").innerHTML= "You Select: \nScissors";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nPaper";
         countClicks ();
     } else if (result == "tie") {
         document.getElementById("result").innerHTML = "It's a tie. Try again.";
+        document.getElementById("player").innerHTML= "You Select: \nScissors";
+        document.getElementById("computer").innerHTML = "Computer Selects: \nScissors";
     }
     document.getElementById("score").innerHTML = "The score is: Wins: "+wins+" Loses: "+loses;
 }

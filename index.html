@@ -6,14 +6,25 @@
     <link rel="stylesheet" href="./style.css">
 </head> 
 <body>
-   <h1>Play RPS!</h1>
+   <div class="header">
+        <h1>Play RPS!</h1>
+        <p>Click on a button below to play!</p>
+    </div>
    <ul>
-        <li><button id="button1">Rock</button></li>
-        <li><button id = 'paper'>Paper</button></li>
-        <li><button id = 'scissors'>Scissors</button></li>
+        <button class = "rockbutton" id="button1"></button>
+        <button class = "paperbutton" id = 'paper'></button>
+        <button class = "scissorbutton" id = 'scissors'></button>
     </ul>
-    <h2 id="result"></h2>
-    <h2 id="score"></h2>
+    <div class="round">
+        <div class="selection">
+            <h2 class = "selectionBox" id="player"></h2>
+            <h2 class = "resultBox" id="result"></h2>
+            <h2 class = "selectionBox" id="computer"></h2>
+        </div>    
+    </div>    
+    <div class = "total">
+        <h2 id="score"></h2>
+    </div>
     <script src="javascript.js"></script>
 </body>
 </html>
