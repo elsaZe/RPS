@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;  
+}
+
